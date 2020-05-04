@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { Provider } from 'react-redux';
+import createStore from './store/store';
+
+import Header from './pages/Header';
+import Dashboard from './pages/Dashboard';
+
+
+const store = createStore();
+
+const theme = createMuiTheme({
+    palette: {
+        background: {
+            paper: '#FFFFFF',
+            default: '#F8F8F8'
+        },
+        text: {
+            primary: '#000000',
+            secondary: "rgba(0, 0, 0, 0.87)"
+        }
+    },
+    typography: {
+        button: {
+            textTransform: 'none'
+        }
+    },
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Provider store={store}>
+                <ThemeProvider theme={theme}>
+                    <CssBaseline />
+                    <Header />
+                    <Dashboard />
+                </ThemeProvider>
+            </Provider>
+        </div>
+    );
 }
 
 export default App;
