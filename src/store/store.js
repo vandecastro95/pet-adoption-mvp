@@ -11,12 +11,12 @@ const logger = createLogger({
 });
 
 export default function configureStore(initialState = {}) {
-    const middleware = [thunk, logger];
+    //const middleware = [thunk, logger];
 
     const store = createStore(
         rootReducer(history),
         initialState,
-        compose(applyMiddleware(...middleware))
+        compose(applyMiddleware(logger))
     );
 
     return store;

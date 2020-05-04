@@ -36,8 +36,11 @@ const useStyles = makeStyles({
     },
     header_icon: {
         width: '100%',
-        display: 'flex',
-        justifyContent: 'center'
+        margin: '0px 25px',
+        ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
+            display: 'flex',
+            justifyContent: 'center',
+        }
     }
 });
 
@@ -60,10 +63,10 @@ export default (props) => {
                         <Button>
                             Log in
                         </Button>
-                        <Button variant='outlined' color="secondary" style={{ borderRadius: '20px'}}>
+                        <Button variant='outlined' color="secondary" style={{ borderRadius: '20px' }}>
                             Sign up
                         </Button>
-                        </div>
+                    </div>
                 </Grid>
             </Grid>
         </Paper >

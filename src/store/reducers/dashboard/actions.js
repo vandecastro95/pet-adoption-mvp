@@ -1,11 +1,7 @@
-export const APP_INITIAL_SESSION_REQUEST = 'app/initial/session/request';
-export const APP_INITIAL_SESSION_SUCCESS = 'app/initial/session/success';
-export const APP_INITIAL_SESSION_FAILURE = 'app/initial/session/failure';
+export const APP_INITIAL_SESSION_REQUEST = 'APP_INITIAL_SESSION_REQUEST';
+export const APP_INITIAL_SESSION_SUCCESS = 'APP_INITIAL_SESSION_SUCCESS';
+export const APP_INITIAL_SESSION_FAILURE = 'APP_INITIAL_SESSION_FAILURE';
 
-export const getUserInitialState = () => ({
-    types: [
-        APP_INITIAL_SESSION_REQUEST,
-        APP_INITIAL_SESSION_SUCCESS,
-        APP_INITIAL_SESSION_FAILURE,
-    ],
-});
+export const getUserInitialState = (type) => ({
+    type: type
+})
