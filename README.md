@@ -1,9 +1,10 @@
-##**Pet Adoption MVP**
+
+# Pet Adoption MVP
 
 Project: Create a platform to help shelters manage and promote pet adoptions,
 
-                  To run project, Download from gi and install dependencies with  ```yarn ```
-                  Then Run app with ```yarn start```
+To run project, Download from git and install dependencies with  ```yarn ```
+Then Run app with ```yarn start```
             
 The App is a conceptual design of the Dashboard page for the
 Platform. The data is loaded by redux with a slight delay to 
@@ -14,9 +15,9 @@ Future versions of the app would preferably have Routing,
 Testing, and a custom webpack4 configuration for a better build
 times and bundle size.
 
-# User Story
-  The project is split between two User Stories: 
-         **1. Person (Pet Adopter)
+## User Story
+  The project is split between two User Stories: <br />
+   **1. Person (Pet Adopter)**
     
         | User (Person) |     Actions           | Story Ending  |
         | ------------- | --------------------- | ------------- |
@@ -25,7 +26,7 @@ times and bundle size.
         |               | 3. Contact Shelter    |               |
         |               | 4. Apply for adoption |               |
         
-  **2. Shelter
+   **2. Shelter**
     
         | User (Shelter)|     Actions           | Story Ending |
         | ------------- | --------------------- | ------------- |
@@ -36,47 +37,47 @@ times and bundle size.
         |               | 4. Take Adoption      |               |
         |               |    Applications       |               |
         
-# Necessary Components for each User
-  **Person:**
-         1. Landing Page
-          - Provides platform information, Mission, Help and Contact Details
-         2. Person Signup/Login Page
-          - User should be able to create a personal account and login
-         3. Dashboard
-          - Displays all Pets depending preferably with filter options 
-            i.e distance to user, pet preferences, etc. 
-         4. View Pet/Shelter Info Page
-          - Displays further information about the pet that are not displayed
-            on the dashboard page
-          - Displays shelter's contact details
-          - Future development can include on site adoption application
+## Necessary Components for each User<br />
+  &nbsp;**Person:**<br />
+         1. Landing Page<br />
+          &nbsp;- Provides platform information, Mission, Help and Contact Details<br />
+         2. Person Signup/Login Page<br />
+          &nbsp;- User should be able to create a personal account and login<br />
+         3. Dashboard<br />
+          &nbsp;- Displays all Pets depending preferably with filter options <br />
+          &nbsp;  i.e distance to user, pet preferences, etc. <br />
+         4. View Pet/Shelter Info Page<br />
+          &nbsp;- Displays further information about the pet that are not displayed<br />
+          &nbsp;  on the dashboard page<br />
+          &nbsp;- Displays shelter's contact details<br />
+          &nbsp;- Future development can include on site adoption application<br />
       
-   **Shelter**
-         1. Landing Page
-          -Provides platform information, Mission, Help and Contact Details
-         2. Shelter Signup Page
-          - User should be able to create a personal account and login
-         3. Dashboard
-          - View all pets that exists on the platform
-          4. Add Pet Page 
-          - User should be able to Add a new pet
-         5. Shelter Home Page
-          - Displays a dashboard with all the pets created by the user
-          - Items on dashboard should have buttons to delete, add, or link
-            to a page to manage an existing pet's information
-         4. Manage Pet Information Page
-          - This could be Add Pet Page but with pre inputed fields with 
-            existing pet information
+   **Shelter**<br />
+         1. Landing Page<br />
+           &nbsp; &nbsp;- Provides platform information, Mission, Help and Contact Details<br />
+         2. Shelter Signup Page<br />
+           &nbsp; &nbsp;- User should be able to create a personal account and login<br />
+         3. Dashboard<br />
+           &nbsp; &nbsp;- View all pets that exists on the platform<br />
+          4. Add Pet Page <br />
+           &nbsp; &nbsp;- User should be able to Add a new pet<br />
+         5. Shelter Home Page<br />
+           &nbsp; &nbsp;- Displays a dashboard with all the pets created by the user<br />
+           &nbsp; &nbsp;- Items on dashboard should have buttons to delete, add, or link<br />
+           &nbsp; &nbsp;  to a page to manage an existing pet's information<br />
+         4. Manage Pet Information Page<br />
+           &nbsp; &nbsp;- This could be Add Pet Page but with pre inputed fields with <br />
+           &nbsp; &nbsp;  existing pet information
             
-**Technology**
-         Front End:
-                  Framework:                  React.js
-                  State management:           React-Redux
-                  Design System/Library:      Material UI/Material Design
-                  Routing:                    React-Router
-                  Authentication:             OAuth/Auth0
-                  Form Handling:              Redux-forms
-                  Module Bundling:            Webpack4
-                  Testing:                    Jest/Enzyme
+**Technology**<br />
+         &nbsp;Front End:<br />
+                 &nbsp; &nbsp; Framework:                  **React.js**<br />
+                 &nbsp; &nbsp; State management:           **React-Redux**<br />
+                 &nbsp; &nbsp; Design System/Library:      **Material UI/Material Design**<br />
+                 &nbsp; &nbsp; Routing:                    **React-Router**<br />
+                 &nbsp; &nbsp; Authentication:             **OAuth/Auth0**<br />
+                 &nbsp; &nbsp; Form Handling:              **Redux-forms**<br />
+                 &nbsp; &nbsp; Module Bundling:            **Webpack4**<br />
+                 &nbsp; &nbsp; Testing:                    **Jest/Enzyme**<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
