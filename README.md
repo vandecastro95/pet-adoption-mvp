@@ -37,20 +37,20 @@ times and bundle size.
         |               | 4. Take Adoption      |               |
         |               |    Applications       |               |
         
-## Necessary Components for each User<br />
+## Necessary Components/Features for each User<br />
   &nbsp;**Person:**<br />
          1. Landing Page<br />
-          &nbsp;- Provides platform information, Mission, Help and Contact Details<br />
+          &nbsp; &nbsp;- Provides platform information, Mission, Help and Contact Details<br />
          2. Person Signup/Login Page<br />
-          &nbsp;- User should be able to create a personal account and login<br />
+          &nbsp; &nbsp;- User should be able to create a personal account and login<br />
          3. Dashboard<br />
-          &nbsp;- Displays all Pets depending preferably with filter options <br />
-          &nbsp;  i.e distance to user, pet preferences, etc. <br />
+          &nbsp; &nbsp;- Displays all Pets depending preferably with filter options <br />
+          &nbsp; &nbsp; &nbsp; i.e distance to user, pet preferences, etc. <br />
          4. View Pet/Shelter Info Page<br />
-          &nbsp;- Displays further information about the pet that are not displayed<br />
-          &nbsp;  on the dashboard page<br />
-          &nbsp;- Displays shelter's contact details<br />
-          &nbsp;- Future development can include on site adoption application<br />
+          &nbsp; &nbsp;- Displays further information about the pet that are not displayed<br />
+          &nbsp; &nbsp; &nbsp; on the dashboard page<br />
+          &nbsp; &nbsp;- Displays shelter's contact details<br />
+          &nbsp; &nbsp;- Future development can include on site adoption application<br />
       
    **Shelter**<br />
          1. Landing Page<br />
@@ -64,10 +64,10 @@ times and bundle size.
          5. Shelter Home Page<br />
            &nbsp; &nbsp;- Displays a dashboard with all the pets created by the user<br />
            &nbsp; &nbsp;- Items on dashboard should have buttons to delete, add, or link<br />
-           &nbsp; &nbsp;  to a page to manage an existing pet's information<br />
+           &nbsp; &nbsp;&nbsp;  to a page to manage an existing pet's information<br />
          4. Manage Pet Information Page<br />
-           &nbsp; &nbsp;- This could be Add Pet Page but with pre inputed fields with <br />
-           &nbsp; &nbsp;  existing pet information
+           &nbsp; &nbsp;- This could just be AddPetPage but with pre-inputed fields with <br />
+           &nbsp; &nbsp;&nbsp;  existing pet information
             
 **Technology**<br />
          &nbsp;Front End:<br />
