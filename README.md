@@ -1,68 +1,85 @@
+##**Pet Adoption MVP**
+
+Project: Create a platform to help shelters manage and promote pet adoptions,
+         To run project, 
+            1. Download from git
+            2. Install dependencies 
+            ```yarn ```
+            3. Run app with
+            ```yarn start```
+            
+          The App is a conceptual design of the Dashboard page for the
+          Platform. The data is loaded by redux with a slight delay to 
+          simulate Get request loading time. Redux is built to handle 
+          multiple reducers with Scalability in mind. The app is bootstrapped
+          with the create-react-app librabry to decrease development times.
+          Future versions of the app would preferably have Routing, 
+          Testing, and a custom webpack4 configuration for a better build
+          times and bundle size.
+
+# User Story
+  The project is split between two User Stories: 
+  **1. Person (Pet Adopter)
+    
+        | User (Person) |     Actions           | Story Ending  |
+        | ------------- | --------------------- | ------------- |
+        | Pet Adopter   | 1. Create Profile     |  Adopts pet   |
+        |               | 2. Find a Pet         |               |
+        |               | 3. Contact Shelter    |               |
+        |               | 4. Apply for adoption |               |
+        
+  **2. Shelter
+    
+        | User (Shelter)|     Actions           | Story Ending |
+        | ------------- | --------------------- | ------------- |
+        | Shelter       | 1. Create Profile     |  Adopts pet   |
+        |               | 2. Add pets to DB     |               |
+        |               | 3. Promote pet to     |               |
+        |               |    Persons            |               |
+        |               | 4. Take Adoption      |               |
+        |               |    Applications       |               |
+        
+# Necessary Components for each User
+  **Person:**
+      1. Landing Page
+          - Provides platform information, Mission, Help and Contact Details
+      1. Person Signup/Login Page
+          - User should be able to create a personal account and login
+      2. Dashboard
+          - Displays all Pets depending preferably with filter options 
+            i.e distance to user, pet preferences, etc. 
+      3. View Pet/Shelter Info Page
+          - Displays further information about the pet that are not displayed
+            on the dashboard page
+          - Displays shelter's contact details
+          - Future development can include on site adoption application
+      
+   **Shelter**
+      1. Landing Page
+          -Provides platform information, Mission, Help and Contact Details
+      2. Shelter Signup Page
+          - User should be able to create a personal account and login
+      3. Dashboard
+          - View all pets that exists on the platform
+      4. Add Pet Page 
+          - User should be able to Add a new pet
+      5. Shelter Home Page
+          - Displays a dashboard with all the pets created by the user
+          - Items on dashboard should have buttons to delete, add, or link
+            to a page to manage an existing pet's information
+      4. Manage Pet Information Page
+          - This could be Add Pet Page but with pre inputed fields with 
+            existing pet information
+            
+**Technology**
+   Front End:
+      Framework:                  React.js
+      State management:           React-Redux
+      Design System/Library:      Material UI/Material Design
+      Routing:                    React-Router
+      Authentication:             OAuth/Auth0
+      Form Handling:              Redux-forms
+      Module Bundling:            Webpack4
+      Testing:                    Jest/Enzyme
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
