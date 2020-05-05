@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Grid, Typography, Button } from '@material-ui/core';
+import { Paper, Grid, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import PetsIcon from '@material-ui/icons/Pets';
 
@@ -37,10 +37,6 @@ const useStyles = makeStyles({
     header_icon: {
         width: '100%',
         margin: '0px 25px',
-        ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
-            display: 'flex',
-            justifyContent: 'center',
-        }
     }
 });
 

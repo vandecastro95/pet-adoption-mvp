@@ -1,7 +1,5 @@
-export const APP_INITIAL_SESSION_REQUEST = 'APP_INITIAL_SESSION_REQUEST';
-export const APP_INITIAL_SESSION_SUCCESS = 'APP_INITIAL_SESSION_SUCCESS';
-export const APP_INITIAL_SESSION_FAILURE = 'APP_INITIAL_SESSION_FAILURE';
+export const APP_INITIALIZE = 'APP_INITIALIZE';
 
 export const getUserInitialState = (type) => ({
-    type: type
+    type: APP_INITIALIZE
 })

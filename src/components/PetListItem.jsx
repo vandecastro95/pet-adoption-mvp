@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Paper, Grid, Typography, Button, CardMedia, Zoom } from '@material-ui/core';
+import { Paper, Typography, Fade } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import Skeleton from '@material-ui/lab/Skeleton';
 
@@ -23,39 +23,42 @@ export default withStyles({
     },
     infoContainer: {
         height: '60px',
-        color: 'rgb(34, 34, 34)',
+        color: '#484848',
         padding: '10px'
 
     }
-})(({ classes, item, isFetching }) => {
-
+})(({ classes, item, isFetching, onClick, id }) => {
+    const [isImageLoading, setIsImageLoading] = useState(true);
     return !isFetching ? (
-        <Zoom in={!isFetching}>
-            <Paper className={classes.root} elevation={0} square={true}>
-                <div className={classes.imageContainer}>
-
-                    <img
-                        src={item.avatar}
-                        style={{
-                            height: '100%',
-                            width: '100%',
-                            objectFit: 'cover',
-                            transition: 'all .3s linear',
-                        }}
-                        alt={item.name}
-                    />
-                </div>
-                <div className={classes.infoContainer}>
-                    <Typography variant="h6" style={{ lineHeight: '1', margin: '2px 0px' }}>
-                        {item.name}
-                    </Typography>
-            Adult {item.breed}
-                </div>
+        <Fade in={!isFetching} timeout={900}>
+        <Paper className={classes.root} elevation={0} square={true} onClick={() => onClick(id)}>
+            <div className={classes.imageContainer}>
+                <img
+                    src={item.avatar}
+                    style={{
+                        height: '100%',
+                        width: '100%',
+                        objectFit: 'cover',
+                        display: isImageLoading ? 'none' : 'unset'
+                    }}
+                    alt={item.name}
+                    onLoad={() => setIsImageLoading(false)}
+                />
+                {
+                    isImageLoading
+                    && <Skeleton variant="rect" width='100%' height='240px' animation="wave" />
+                }
+            </div>
+            <div className={classes.infoContainer}>
+                <Typography variant="h6" style={{ lineHeight: '1', margin: '2px 0px' }}>
+                    {item.name}
+                </Typography>
+                Adult {item.breed}
+            </div>
             </Paper>
-        </Zoom>
+            </Fade>
     )
         : (
-            <Zoom in={isFetching}>
                 <Paper className={classes.root} elevation={0} square={true}>
                     <div className={classes.imageContainer}>
                         <Skeleton variant="rect" width='100%' height='240px' animation="wave" />
@@ -65,6 +68,5 @@ export default withStyles({
                         <Skeleton variant="text" animation="wave" />
                     </div>
                 </Paper>
-            </Zoom>
         )
 });
