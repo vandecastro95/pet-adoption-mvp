@@ -30,8 +30,8 @@ times and bundle size.
     
         | User (Shelter)|     Actions           | Story Ending |
         | ------------- | --------------------- | ------------- |
-        | Shelter       | 1. Create Profile     |  Adopts pet   |
-        |               | 2. Add pets to DB     |               |
+        | Shelter       | 1. Create Profile     |  Person       |
+        |               | 2. Add pets to DB     |  Adopts pet   |
         |               | 3. Promote pet to     |               |
         |               |    Persons            |               |
         |               | 4. Take Adoption      |               |
